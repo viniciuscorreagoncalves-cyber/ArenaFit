@@ -34,10 +34,12 @@ header {
     color: var(--cor-branca);
     text-align: center;
     padding: 35px;
+<<<<<<< HEAD
     top: 0;
     left: 0;
+=======
+>>>>>>> 0404851643b57cde874260e02430635e3cd24aa6
     width: 100%;
-    z-index: 1000;
 }
 
 /* MENU DE NAVEGAÇÃO */
@@ -64,7 +66,7 @@ main {
     width: 1200px;
     max-width: 100%;
     margin: 20px auto;
-    padding: 120px 20px 20px;
+    padding: 35px 20px 20px;
 }
 
 /* SEÇÕES (Blocos de conteúdo) */
@@ -75,7 +77,6 @@ section {
     border-radius: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
 }
 
 section:hover {
@@ -96,13 +97,16 @@ h1 {
 }
 
 h2 {
-    color: #333;                       /* Cor do título */
-    border-bottom: 2px solid #333;     /* Linha decorativa embaixo do título */
-    padding-bottom: 5px;               /* Espaço entre o texto e a linha */
+  color: #333;
+  border-bottom: 2px solid #333;
+  padding-bottom: 5px;
+  text-align: center;
 }
+
 h2::before {
-    content: "▸ ";
-    color: var(--cor-primaria);
+  content: "▸";
+  color: var(--cor-primaria);
+  margin-right: 8px;
 }
 
 
@@ -321,3 +325,37 @@ button:hover {
 .pagina-modalidades section {
     border-top: 4px solid var(--cor-primaria);
 }
+
+.secao-posicao {
+    position: relative;
+}
+
+ .secao-posicao::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 20px;
+
+    width: 40px;
+    height: 4px;
+
+    background-color: var(--cor-branca);
+ }
+
+ input[type="submit"],
+ input[type="reset"]
+  {
+    background-color: var(--cor-section);
+    color: var(--cor-texto);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: var(--fonte-principal);
+    font-weight: 600;
+ }
+
+ input[type="submit"]:hover,
+ input[type="reset"]:hover {
+    background-color: var(--cor-primaria);
+ }
