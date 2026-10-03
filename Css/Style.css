@@ -34,32 +34,36 @@ header {
     color: var(--cor-branca);
     text-align: center;
     padding: 35px;
-<<<<<<< HEAD
     top: 0;
     left: 0;
-=======
->>>>>>> 0404851643b57cde874260e02430635e3cd24aa6
     width: 100%;
 }
 
 /* MENU DE NAVEGAÇÃO */
 nav {
-    background-color: var(--cor-primaria); /* Fundo laranja */
-    text-align: center;                    /* Centraliza os links */
-    padding: 15px;    /* Altura do menu */
+    background-color: var(--cor-primaria);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    flex-wrap: wrap;
 }
 
 /* LINKS DO MENU */
 nav a {
-    color: white;             /* Texto branco */
-    text-decoration: none;    /* Remove o sublinhado dos links */
-    margin: 10px;             /* Espaço entre um link e outro */
+    color: var(--cor-branca);
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 50px;
+    transition: 0.3s;
 }
-    /* EFEITO AO PASSAR O MOUSE */
-  nav a:hover {
-    color: var(--cor-secundaria);
+/* EFEITO QUANDO PASSA MOUSE POR CIMA */
+nav a:hover {
+    background-color: white;
+    color: var(--cor-escura);
+    transform: scale(1.05);
 }
-
 
 /* CONTEÚDO PRINCIPAL (Caixa que segura o meio do site) */
 main {
