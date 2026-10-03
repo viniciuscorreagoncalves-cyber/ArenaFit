@@ -34,7 +34,6 @@ header {
     color: var(--cor-branca);
     text-align: center;
     padding: 35px;
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
