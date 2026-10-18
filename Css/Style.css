@@ -1,4 +1,4 @@
-/* Importa a fonte Montserrat do Google Fonts */
+﻿/* Importa a fonte Montserrat do Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 
 /* RESET DA PÁGINA */
@@ -363,3 +363,39 @@ button:hover {
  input[type="reset"]:hover {
     background-color: var(--cor-primaria);
  }
+ /* Commit 1 - Organização da matrícula */
+
+body:has(main > form) main > form {
+    width: 100%;
+    max-width: 850px;
+    margin: 25px auto;
+}
+
+body:has(main > form) form fieldset {
+    min-width: 0;
+    padding: 20px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+body:has(main > form) form legend {
+    padding: 0 8px;
+    font-weight: 700;
+    color: var(--cor-primaria);
+}
+
+body:has(main > form) form label {
+    font-weight: 500;
+}
+
+body:has(main > form) form input[type="radio"] {
+    width: auto;
+    margin: 8px 5px 8px 0;
+}
+
+body:has(main > form) form input[type="submit"],
+body:has(main > form) form input[type="reset"] {
+    width: auto;
+    margin: 5px 5px 12px 0;
+}
