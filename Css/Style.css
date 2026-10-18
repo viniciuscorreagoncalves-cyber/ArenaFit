@@ -399,3 +399,37 @@ body:has(main > form) form input[type="reset"] {
     width: auto;
     margin: 5px 5px 12px 0;
 }
+/* Commit 2 - Responsividade da matrícula */
+
+@media (max-width: 768px) {
+    body:has(main > form) main {
+        width: 100%;
+        padding: 25px 15px;
+    }
+
+    body:has(main > form) form fieldset {
+        padding: 15px;
+    }
+
+    body:has(main > form) form input[type="submit"],
+    body:has(main > form) form input[type="reset"] {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    body:has(main > form) form fieldset {
+        padding: 12px;
+    }
+
+    body:has(main > form) form input:not([type="radio"]):not([type="submit"]):not([type="reset"]),
+    body:has(main > form) form select,
+    body:has(main > form) form textarea {
+        max-width: 100%;
+        font-size: 16px;
+    }
+
+    body:has(main > form) form textarea {
+        resize: vertical;
+    }
+}
