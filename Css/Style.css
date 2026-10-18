@@ -433,3 +433,47 @@ body:has(main > form) form input[type="reset"] {
         resize: vertical;
     }
 }
+/* Commit 3 - Efeitos visuais da matrícula */
+
+body:has(main > form) form input:not([type="radio"]):not([type="submit"]):not([type="reset"]),
+body:has(main > form) form select,
+body:has(main > form) form textarea {
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+body:has(main > form) form input:not([type="radio"]):not([type="submit"]):not([type="reset"]):focus,
+body:has(main > form) form select:focus,
+body:has(main > form) form textarea:focus {
+    outline: 2px solid var(--cor-secundaria);
+    outline-offset: 1px;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 6px rgba(0, 180, 216, 0.25);
+}
+
+body:has(main > form) form input[type="submit"],
+body:has(main > form) form input[type="reset"] {
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                transform 0.2s ease;
+}
+
+body:has(main > form) form input[type="submit"]:hover,
+body:has(main > form) form input[type="reset"]:hover {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branca);
+    transform: translateY(-2px);
+}
+
+body:has(main > form) form input[type="submit"]:active,
+body:has(main > form) form input[type="reset"]:active {
+    transform: scale(0.98);
+}
+
+body:has(main > form) form fieldset {
+    transition: border-color 0.3s ease;
+}
+
+body:has(main > form) form fieldset:hover {
+    border-color: var(--cor-secundaria);
+}
