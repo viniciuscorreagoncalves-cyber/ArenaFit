@@ -144,7 +144,7 @@ li {
     background-color: #F1F3F5;
 }
 
-}
+
 
 
 /* ADAPTAÇÃO PARA CELULAR (Telas menores que 600px) */
@@ -166,4 +166,29 @@ li {
         font-size: 12px; /* Diminui a letra da tabela para caber na tela */
     }
 } /* NOTA DE DESENVOLVIMENTO: Foi utilizada uma pequena assistência de IA para organizar a estrutura e padronizar o codigo em CSS. */
+/* RESET CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section {
+    background-color: var(--cor-section);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+
+    position: relative;
+}
+
+section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: var(--cor-primaria);
+    border-radius: 20px 0 0 20px;
+}
 
