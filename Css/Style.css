@@ -1,7 +1,10 @@
 /* Importa a fonte Montserrat do Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
-
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 /* CONFIGURAÇÃO DE CORES E FONTES (Variáveis) */
 :root {
     --cor-primaria: #FF6B35;       /* Laranja moderno */
@@ -24,19 +27,16 @@ body {
 
 /* CABEÇALHO (Topo do site) */
 header {
+header {
     background-color: var(--cor-escura);
     color: var(--cor-branca);
-    text-align: center;
     padding: 20px;
-    /*posicionamento fixo para o cabeçalho, mantendo-o visível ao rolar a página*/
-
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 4px;
 }
-
 
 /* MENU DE NAVEGAÇÃO */
 nav {
