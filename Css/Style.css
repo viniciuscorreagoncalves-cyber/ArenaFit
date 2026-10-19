@@ -27,7 +27,6 @@ body {
 
 /* CABEÇALHO (Topo do site) */
 header {
-header {
     background-color: var(--cor-escura);
     color: var(--cor-branca);
     padding: 20px;
@@ -45,15 +44,25 @@ nav {
     padding: 15px;                         /* Altura do menu */
 }
 
-/* LINKS DO MENU */
-nav a {
-    color: white;             /* Texto branco */
-    text-decoration: none;    /* Remove o sublinhado dos links */
-    margin: 10px;             /* Espaço entre um link e outro */
+nav {
+    background-color: var(--cor-primaria);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
-    /* EFEITO AO PASSAR O MOUSE */
-  nav a:hover {
-    color: var(--cor-secundaria);
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+nav a {
+    display: block;
+    padding: 12px 16px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
 }
 
 
