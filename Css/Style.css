@@ -149,6 +149,13 @@ h3 {
     color: #444; /* Cor do subtítulo */
 }
 
+.Interna {
+    width: 600px;
+    height: auto;
+    border-radius: 15px;
+}
+
+
 /* IMAGENS */
 img {
     max-width: 100%; /* Faz a imagem se ajustar ao tamanho da tela */
