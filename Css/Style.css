@@ -1,34 +1,30 @@
-﻿/* Importa a fonte Montserrat do Google Fonts */
+/* Fonte e variáveis */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 
-/* RESET DA PÁGINA */
+:root {
+    --cor-primaria: #FF6B35;
+    --cor-secundaria: #00B4D8;
+    --cor-escura: #151515;
+    --cor-fundo: #E9ECEF;
+    --cor-texto: #212529;
+    --cor-branca: #FFFFFF;
+    --cor-section: #FFFFFF;
+    --fonte-principal: "Montserrat", sans-serif;
+}
+
+/* Reset e estilos globais */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* CONFIGURAÇÃO DE CORES E FONTES (Variáveis) */
-:root {
-    --cor-primaria: #FF6B35;       /* Laranja moderno */
-    --cor-secundaria: #00B4D8;     /* Azul/ciano */ 
-    --cor-escura: #151515;         /* Preto grafite */
-    --cor-fundo: #E9ECEF;          /* Cinza claro */
-    --cor-texto: #212529;          /* Cinza escuro */
-    --cor-branca: #FFFFFF;         /* Branco */
-    --fonte-principal: "Montserrat", sans-serif;
-    --cor-section: #FFFFFF;        /* Branco para os blocos */
-}
-
-/* CONFIGURAÇÕES DO CORPO DA PÁGINA */
 body {
-    font-family: var(--fonte-principal); /* Aplica a fonte Montserrat */
-    margin: 0;                           /* Remove as bordas padrão da tela */
-    background-color: var(--cor-fundo);  /* Cor de fundo cinza */
-    color: var(--cor-texto);             /* Cor do texto do site */
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
 }
 
-/* CABEÇALHO (Topo do site) */
 header {
     background-color: var(--cor-escura);
     color: var(--cor-branca);
@@ -38,20 +34,9 @@ header {
     align-items: center;
     text-align: center;
     gap: 4px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 4px;
-    text-align: center;
-    padding: 35px;
-    top: 0;
-    left: 0;
     width: 100%;
 }
 
-/* MENU DE NAVEGAÇÃO */
 nav {
     background-color: var(--cor-primaria);
     display: flex;
@@ -60,9 +45,6 @@ nav {
     gap: 15px;
     padding: 15px;
     flex-wrap: wrap;
-}
-nav {
-    background-color: var(--cor-primaria);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -76,27 +58,20 @@ nav ul {
 
 nav a {
     display: block;
-    padding: 12px 16px;
-    color: white;
-    text-decoration: none;
-    text-align: center;
-}
-/* LINKS DO MENU */
-nav a {
     color: var(--cor-branca);
     text-decoration: none;
+    text-align: center;
     padding: 10px 18px;
     border-radius: 50px;
     transition: 0.3s;
 }
-/* EFEITO QUANDO PASSA MOUSE POR CIMA */
+
 nav a:hover {
-    background-color: white;
+    background-color: var(--cor-branca);
     color: var(--cor-escura);
     transform: scale(1.05);
 }
 
-/* CONTEÚDO PRINCIPAL (Caixa que segura o meio do site) */
 main {
     width: 1200px;
     max-width: 100%;
@@ -104,136 +79,19 @@ main {
     padding: 35px 20px 20px;
 }
 
-/* SEÇÕES (Blocos de conteúdo) */
-section {
-    background-color: var(--cor-section);
-    padding: 25px;
-    margin-bottom: 25px;
-    border-radius: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-section:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
-}
-/* RODAPÉ (Fim da página) */
-footer {
-    background-color: #151515;
-    color: white;
-    text-align: center;
-    padding: 15px;
-}
-
-/* TEXTOS E TÍTULOS */
-h1 {
-    font-size: 32px; /* Tamanho do título principal */
-}
-
-h2 {
-  color: #333;
-  border-bottom: 2px solid #333;
-  padding-bottom: 5px;
-  text-align: center;
-}
-
-h2::before {
-  content: "▸";
-  color: var(--cor-primaria);
-  margin-right: 8px;
-}
-
-
-h3 {
-    color: #444; /* Cor do subtítulo */
-}
-
-.Interna {
-    width: 600px;
-    height: auto;
-    border-radius: 15px;
-}
-
-
-/* IMAGENS */
-img {
-    max-width: 100%; /* Faz a imagem se ajustar ao tamanho da tela */
-    height: auto;     /* Mantém a imagem na proporção correta */
-    border-radius: 10px;   
-}
-
-/* Imagens que estão dentro de artigos */
-article img {
-    width: 200px;         /* Força a imagem a ter 200px de largura */
-    border-radius: 10px;  /* Cantos levemente arredondados */
-}
-
-/* TABELAS */
-table {
-    width: 100%;             /* Tabela ocupa toda a largura disponível */
-    border-collapse: collapse; /* Junta as bordas para virar uma linha única */
-}
-
-/* Células da tabela */
-th, td {
-    border: 1px solid #999; /* Linha cinza ao redor das células */
-    padding: 10px;          /* Espaço interno para o texto respirar */
-    text-align: center;     /* Centraliza o texto na tabela */
-}
-
-/* Títulos da tabela (Primeira linha) */
-th {
-    background-color: #333; /* Fundo escuro */
-    color: white;           /* Texto branco */
-}
-
-/* LISTAS */
-ul {
-    line-height: 1.8; /* Aumenta o espaço entre as linhas da lista */
-}
-
-li {
-    margin-bottom: 5px; /* Espaço entre um item e outro da lista */
-}
-   li:nth-child(even) {
-    background-color: #F1F3F5;
-}
-
-
-
-/* ADAPTAÇÃO PARA CELULAR (Telas menores que 600px) */
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 24px; /* Diminui o título no celular */
-    }
-
-    nav a {
-        display: block;  /* Coloca os links do menu um embaixo do outro */
-        margin: 8px;
-    }
-
-    main {
-        width: 95%;      /* Usa melhor o espaço lateral no celular */
-    }
-
-    table {
-        font-size: 12px; /* Diminui a letra da tabela para caber na tela */
-    }
-} /* NOTA DE DESENVOLVIMENTO: Foi utilizada uma pequena assistência de IA para organizar a estrutura e padronizar o codigo em CSS. */
-/* RESET CSS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 section {
     background-color: var(--cor-section);
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 20px;
-
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
+}
+
+section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
 }
 
 section::after {
@@ -247,6 +105,70 @@ section::after {
     border-radius: 20px 0 0 20px;
 }
 
+footer {
+    background-color: var(--cor-escura);
+    color: var(--cor-branca);
+    text-align: center;
+    padding: 15px;
+}
+
+/* Tipografia */
+h1 { font-size: 32px; }
+
+h2 {
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+h2::before {
+    content: "▸";
+    color: var(--cor-primaria);
+    margin-right: 8px;
+}
+
+h3 { color: #444; }
+
+/* Imagens, listas e tabelas */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.Interna {
+    width: 600px;
+    height: auto;
+    border-radius: 15px;
+}
+
+article img {
+    width: 200px;
+    border-radius: 10px;
+}
+
+ul { line-height: 1.8; }
+li { margin-bottom: 5px; }
+li:nth-child(even) { background-color: #F1F3F5; }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #999;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #333;
+    color: var(--cor-branca);
+}
+
+/* Cards */
 .card {
     display: flex;
     flex-direction: column;
@@ -255,21 +177,10 @@ section::after {
     padding: 16px;
     background-color: #F1F3F5;
     border-radius: 16px;
-
 }
 
-@media (min-width: 768px) {
-    nav ul {
-        flex-direction: row;
-        justify-content: center;
-    }
-}
-
-/* ESTILO DOS CAMPOS DO FORMULÁRIO */
-
-input,
-textarea,
-select {
+/* Campos e botões */
+input, textarea, select {
     width: 100%;
     padding: 10px;
     margin-top: 6px;
@@ -279,9 +190,7 @@ select {
     font-family: var(--fonte-principal);
 }
 
-input:focus,
-textarea:focus,
-select:focus {
+input:focus, textarea:focus, select:focus {
     outline: none;
     border-color: var(--cor-primaria);
 }
@@ -297,32 +206,24 @@ button {
     font-weight: 600;
 }
 
-button:hover {
-    background-color: var(--cor-secundaria);
+button:hover { background-color: var(--cor-secundaria); }
+
+input[type="submit"], input[type="reset"] {
+    background-color: var(--cor-section);
+    color: var(--cor-texto);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: var(--fonte-principal);
+    font-weight: 600;
 }
-/* AJUSTES PARA TELAS PEQUENAS */
 
-@media (max-width: 600px) {
-    main {
-        padding: 100px 15px 15px;
-    }
-
-    section {
-        padding: 18px;
-    }
-
-    input,
-    textarea,
-    select {
-        font-size: 14px;
-    }
-
-    button {
-        width: 100%;
-    }
+input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: var(--cor-primaria);
 }
-/* ===== ESTILIZAÇÃO DA PÁGINA DE MODALIDADES ===== */
 
+/* Página de modalidades */
 .pagina-modalidades main {
     width: 90%;
     max-width: 1100px;
@@ -339,10 +240,7 @@ button:hover {
 .pagina-modalidades section {
     margin-bottom: 0;
     padding: 25px;
-}
-/* ===== MELHORIAS VISUAIS DOS CARDS ===== */
-
-.pagina-modalidades section {
+    border-top: 4px solid var(--cor-primaria);
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -358,96 +256,37 @@ button:hover {
     width: 350px;
     max-width: 100%;
     margin: 15px auto;
+    transition: transform 0.3s ease;
 }
 
 .pagina-modalidades section p {
     line-height: 1.6;
+    margin-bottom: 10px;
 }
-/* ===== RESPONSIVIDADE E EFEITOS ===== */
+
+.pagina-modalidades section strong { color: var(--cor-primaria); }
 
 .pagina-modalidades section:hover {
     transform: translateY(-5px);
     box-shadow: 0 7px 18px rgba(0, 0, 0, 0.18);
 }
 
-.pagina-modalidades section img {
-    transition: transform 0.3s ease;
-}
+.pagina-modalidades section:hover img { transform: scale(1.03); }
 
-.pagina-modalidades section:hover img {
-    transform: scale(1.03);
-}
+/* Elementos de posição */
+.secao-posicao { position: relative; }
 
-@media (max-width: 700px) {
-
-    .pagina-modalidades main {
-        width: 92%;
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .pagina-modalidades h2 {
-        font-size: 26px;
-    }
-
-    .pagina-modalidades section {
-        padding: 20px;
-    }
-
-    .pagina-modalidades section h3 {
-        font-size: 20px;
-    }
-}
-/* ===== DESTAQUE DAS INFORMAÇÕES DAS MODALIDADES ===== */
-
-.pagina-modalidades section strong {
-    color: var(--cor-primaria);
-}
-
-.pagina-modalidades section p {
-    margin-bottom: 10px;
-}
-/* ===== DESTAQUE VISUAL DOS CARDS ===== */
-
-.pagina-modalidades section {
-    border-top: 4px solid var(--cor-primaria);
-}
-
-.secao-posicao {
-    position: relative;
-}
-
- .secao-posicao::after {
+.secao-posicao::after {
     content: "";
     position: absolute;
     top: 0;
     right: 20px;
-
     width: 40px;
     height: 4px;
-
     background-color: var(--cor-branca);
- }
+}
 
- input[type="submit"],
- input[type="reset"]
-  {
-    background-color: var(--cor-section);
-    color: var(--cor-texto);
-    border: none;
-    padding: 12px 25px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-family: var(--fonte-principal);
-    font-weight: 600;
- }
-
- input[type="submit"]:hover,
- input[type="reset"]:hover {
-    background-color: var(--cor-primaria);
- }
- /* Commit 1 - Organização da matrícula */
-
+/* Formulário de matrícula */
 body:has(main > form) main > form {
     width: 100%;
     max-width: 850px;
@@ -460,6 +299,11 @@ body:has(main > form) form fieldset {
     margin-bottom: 16px;
     border: 1px solid #ccc;
     border-radius: 10px;
+    transition: border-color 0.3s ease;
+}
+
+body:has(main > form) form fieldset:hover {
+    border-color: var(--cor-secundaria);
 }
 
 body:has(main > form) form legend {
@@ -468,9 +312,7 @@ body:has(main > form) form legend {
     color: var(--cor-primaria);
 }
 
-body:has(main > form) form label {
-    font-weight: 500;
-}
+body:has(main > form) form label { font-weight: 500; }
 
 body:has(main > form) form input[type="radio"] {
     width: auto;
@@ -481,48 +323,13 @@ body:has(main > form) form input[type="submit"],
 body:has(main > form) form input[type="reset"] {
     width: auto;
     margin: 5px 5px 12px 0;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
-/* Commit 2 - Responsividade da matrícula */
-
-@media (max-width: 768px) {
-    body:has(main > form) main {
-        width: 100%;
-        padding: 25px 15px;
-    }
-
-    body:has(main > form) form fieldset {
-        padding: 15px;
-    }
-
-    body:has(main > form) form input[type="submit"],
-    body:has(main > form) form input[type="reset"] {
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    body:has(main > form) form fieldset {
-        padding: 12px;
-    }
-
-    body:has(main > form) form input:not([type="radio"]):not([type="submit"]):not([type="reset"]),
-    body:has(main > form) form select,
-    body:has(main > form) form textarea {
-        max-width: 100%;
-        font-size: 16px;
-    }
-
-    body:has(main > form) form textarea {
-        resize: vertical;
-    }
-}
-/* Commit 3 - Efeitos visuais da matrícula */
 
 body:has(main > form) form input:not([type="radio"]):not([type="submit"]):not([type="reset"]),
 body:has(main > form) form select,
 body:has(main > form) form textarea {
-    transition: border-color 0.3s ease,
-                box-shadow 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 body:has(main > form) form input:not([type="radio"]):not([type="submit"]):not([type="reset"]):focus,
@@ -532,13 +339,6 @@ body:has(main > form) form textarea:focus {
     outline-offset: 1px;
     border-color: var(--cor-primaria);
     box-shadow: 0 0 6px rgba(0, 180, 216, 0.25);
-}
-
-body:has(main > form) form input[type="submit"],
-body:has(main > form) form input[type="reset"] {
-    transition: background-color 0.3s ease,
-                color 0.3s ease,
-                transform 0.2s ease;
 }
 
 body:has(main > form) form input[type="submit"]:hover,
@@ -553,10 +353,57 @@ body:has(main > form) form input[type="reset"]:active {
     transform: scale(0.98);
 }
 
-body:has(main > form) form fieldset {
-    transition: border-color 0.3s ease;
+/* Responsividade */
+@media (min-width: 768px) {
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
 }
 
-body:has(main > form) form fieldset:hover {
-    border-color: var(--cor-secundaria);
+@media (max-width: 768px) {
+    body:has(main > form) main {
+        width: 100%;
+        padding: 25px 15px;
+    }
+
+    body:has(main > form) form fieldset { padding: 15px; }
+
+    body:has(main > form) form input[type="submit"],
+    body:has(main > form) form input[type="reset"] { max-width: 100%; }
+}
+
+@media (max-width: 700px) {
+    .pagina-modalidades main {
+        width: 92%;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .pagina-modalidades h2 { font-size: 26px; }
+    .pagina-modalidades section { padding: 20px; }
+    .pagina-modalidades section h3 { font-size: 20px; }
+}
+
+@media (max-width: 600px) {
+    header h1 { font-size: 24px; }
+    nav a { display: block; margin: 8px; }
+    main { width: 95%; padding: 100px 15px 15px; }
+    table { font-size: 12px; }
+    section { padding: 18px; }
+    input, textarea, select { font-size: 14px; }
+    button { width: 100%; }
+}
+
+@media (max-width: 480px) {
+    body:has(main > form) form fieldset { padding: 12px; }
+
+    body:has(main > form) form input:not([type="radio"]):not([type="submit"]):not([type="reset"]),
+    body:has(main > form) form select,
+    body:has(main > form) form textarea {
+        max-width: 100%;
+        font-size: 16px;
+    }
+
+    body:has(main > form) form textarea { resize: vertical; }
 }
