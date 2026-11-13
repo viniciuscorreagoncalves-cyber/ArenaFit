@@ -1,0 +1,19 @@
+JAVASCRIPT COMPLETO - ARENAFIT
+
+Esta pasta contém uma versão completa do JavaScript para a página de matrícula.
+
+Funcionalidades:
+- Máscara de telefone com DDD.
+- Máscara de CPF.
+- Validação dos dígitos verificadores do CPF.
+- Impede selecionar uma data de nascimento futura.
+- Valida telefone e CPF antes de confirmar o formulário.
+- Exibe uma mensagem de confirmação.
+
+Como funciona:
+O arquivo matricula.html foi configurado para carregar:
+../JavaScript_Completo/script.js
+
+Importante:
+A confirmação é apenas demonstrativa. Para armazenar ou enviar os dados
+da matrícula, seria necessário criar um servidor e conectar um banco de dados.
