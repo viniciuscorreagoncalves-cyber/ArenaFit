@@ -223,6 +223,44 @@ input[type="submit"]:hover, input[type="reset"]:hover {
     background-color: var(--cor-primaria);
 }
 
+/* Página inicial: cards de depoimentos e botões */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 12px;
+}
+
+.card h3 { margin-bottom: 8px; }
+
+.hero { text-align: center; }
+.hero .Interna { max-width: 100%; }
+
+.btn {
+    display: inline-block;
+    background-color: var(--cor-primaria);
+    color: var(--cor-branca);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 12px 25px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: var(--cor-secundaria);
+    transform: translateY(-2px);
+}
+
+.promocao, .cta { text-align: center; }
+
 /* Página de modalidades */
 .pagina-modalidades main {
     width: 90%;

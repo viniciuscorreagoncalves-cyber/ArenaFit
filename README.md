@@ -1,2 +1,2 @@
-# ArenaFit-academia
-Projeto Design para Web II - site da academia ArenaFit
+# Fitcode-academia
+Projeto Design para Web II - site da academia Fitcode

@@ -1,4 +1,4 @@
-JAVASCRIPT COMPLETO - ARENAFIT
+JAVASCRIPT COMPLETO - FITCODE
 
 Esta pasta contém uma versão completa do JavaScript para a página de matrícula.
 

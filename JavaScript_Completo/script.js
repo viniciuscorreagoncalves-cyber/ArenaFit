@@ -1,5 +1,5 @@
 // =====================================================
-// JAVASCRIPT COMPLETO - ARENAFIT
+// JAVASCRIPT COMPLETO - FITCODE
 // Funcionalidades aplicadas ao formulário de matrícula:
 // 1. Máscara automática para telefone
 // 2. Máscara automática para CPF
