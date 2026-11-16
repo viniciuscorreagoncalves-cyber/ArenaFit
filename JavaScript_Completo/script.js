@@ -143,3 +143,48 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+  // MODAL DE IMAGEM
+  const imagemTrigger = document.querySelector("#imagemModalTrigger");
+  const modal = document.querySelector("#modalImagem");
+  const imagemAmpliada = document.querySelector("#imagemAmpliada");
+  const fecharModal = document.querySelector("#fecharModal");
+
+  if (imagemTrigger && modal && imagemAmpliada && fecharModal) {
+    imagemTrigger.addEventListener("click", function () {
+      imagemAmpliada.src = imagemTrigger.src;
+      imagemAmpliada.alt = imagemTrigger.alt;
+      modal.style.display = "flex";
+    });
+
+    fecharModal.addEventListener("click", function () {
+      modal.style.display = "none";
+    });
+
+    modal.addEventListener("click", function (event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        modal.style.display = "none";
+      }
+    });
+  }
+
+  // MODO ESCURO
+  const botaoTema = document.querySelector("#botaoTema");
+
+  if (botaoTema) {
+    botaoTema.addEventListener("click", function () {
+      document.body.classList.toggle("modo-escuro");
+
+      if (document.body.classList.contains("modo-escuro")) {
+        botaoTema.textContent = "Ativar modo claro";
+      } else {
+        botaoTema.textContent = "Ativar modo escuro";
+      }
+    });
+  }

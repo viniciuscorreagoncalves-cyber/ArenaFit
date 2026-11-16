@@ -1,4 +1,4 @@
-/* Fonte e variáveis */
+﻿/* Fonte e variáveis */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 
 :root {
@@ -406,4 +406,69 @@ body:has(main > form) form input[type="reset"]:active {
     }
 
     body:has(main > form) form textarea { resize: vertical; }
+}
+
+/* Modal de imagem da matrícula */
+.modal-imagem {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-imagem img {
+    max-width: 90%;
+    max-height: 85%;
+    border-radius: 10px;
+}
+
+.fechar-modal {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Botão para alternar o tema */
+#botaoTema {
+    padding: 10px 18px;
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+/* Modo escuro da página de matrícula */
+body.modo-escuro {
+    background-color: #181818;
+    color: #f1f1f1;
+}
+
+body.modo-escuro main {
+    background-color: #242424;
+    color: #f1f1f1;
+}
+
+body.modo-escuro fieldset {
+    background-color: #303030;
+    color: #f1f1f1;
+}
+
+body.modo-escuro input,
+body.modo-escuro select,
+body.modo-escuro textarea {
+    background-color: #3a3a3a;
+    color: #f1f1f1;
+    border-color: #777;
+}
+
+body.modo-escuro label {
+    color: #f1f1f1;
 }
