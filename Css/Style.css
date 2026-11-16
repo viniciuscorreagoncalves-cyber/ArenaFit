@@ -38,6 +38,10 @@ body {
     font-family: var(--fonte-principal);
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
+    /* Rodapé sempre no fim da tela, mesmo em páginas curtas */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
@@ -171,6 +175,7 @@ main {
     max-width: 1200px;
     margin: 10px auto;
     padding: 20px 15px;
+    flex: 1;
 }
 
 section {
