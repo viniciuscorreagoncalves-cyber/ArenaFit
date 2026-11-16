@@ -17,3 +17,8 @@ O arquivo matricula.html foi configurado para carregar:
 Importante:
 A confirmação é apenas demonstrativa. Para armazenar ou enviar os dados
 da matrícula, seria necessário criar um servidor e conectar um banco de dados.
+
+OUTRO ARQUIVO: interface.js (carregado em todas as paginas)
+- Menu mobile (hamburguer).
+- Modal de imagem (fecha clicando fora ou com ESC).
+- Modo escuro com a escolha salva no navegador.

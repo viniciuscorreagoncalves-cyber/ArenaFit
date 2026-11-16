@@ -3,22 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Planos - Fitcode</title>
+    <title>Planos - ArenaFit</title>
     <link rel="icon" type="image/png" href="../fotos/icone.png">
+    <script src="../JavaScript_Completo/interface.js" defer></script>
     <link rel="stylesheet" href="../Css/Style.css">
   </head>
 
   <body>
     <header>
-      <h1>Fitcode Academia</h1>
+      <h1>ArenaFit Academia</h1>
     </header>
 
     <nav>
-      <a href="index.html">Início</a> 
-      <a href="modalidades.html">Modalidades</a> 
-      <a href="planos.html">Planos</a> 
-      <a href="estrutura.html">Estrutura</a> 
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">☰ Menu</button>
+      <a href="index.html">Início</a>
+      <a href="modalidades.html">Modalidades</a>
+      <a href="planos.html">Planos</a>
+      <a href="estrutura.html">Estrutura</a>
       <a href="matricula.html">Matrícula</a>
+      <button class="tema-toggle" type="button" role="switch" aria-label="Modo escuro" aria-checked="false"><span class="tema-trilho"><span class="tema-bolinha"></span></span></button>
     </nav>
 
     <main>
@@ -28,7 +31,7 @@
 
       <br>
 
-      <table border="1">
+      <table>
         <tr>
           <th>Plano</th>
           <th>Valor</th>
@@ -80,7 +83,7 @@
     </main>
 
     <footer>
-      <p>Fitcode Academia - 2026</p>
+      <p>ArenaFit Academia - 2026</p>
     </footer>
   </body>
 </html>
