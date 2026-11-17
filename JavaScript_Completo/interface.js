@@ -1,19 +1,9 @@
-// =====================================================
-// INTERFACE - ARENAFIT (carregado em todas as páginas)
-// 1. Menu mobile (abre e fecha no toque)
-// 2. Modal de imagem (fecha clicando fora ou com ESC)
-// 3. Modo escuro (lembra a escolha do usuário)
-// =====================================================
-
 document.addEventListener("DOMContentLoaded", function () {
   const nav = document.querySelector("nav");
   const botaoMenu = document.querySelector(".menu-toggle");
   const botaoTema = document.querySelector(".tema-toggle");
   const imagens = document.querySelectorAll("main img");
 
-  // -----------------------------
-  // MENU MOBILE
-  // -----------------------------
   function fecharMenu() {
     nav.classList.remove("aberto");
     botaoMenu.setAttribute("aria-expanded", "false");
@@ -36,10 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // -----------------------------
-  // MODO ESCURO
-  // A escolha fica salva no navegador.
-  // -----------------------------
   function aplicarTema(escuro) {
     document.body.classList.toggle("dark", escuro);
 
@@ -64,16 +50,10 @@ document.addEventListener("DOMContentLoaded", function () {
       try {
         localStorage.setItem("arenafit-tema", escuro ? "escuro" : "claro");
       } catch (erro) {
-        // Sem armazenamento disponível: o tema vale só nesta visita.
       }
     });
   }
 
-  // -----------------------------
-  // MODAL DE IMAGEM
-  // Clique na foto para ampliar.
-  // Fecha clicando fora, no botão X ou com a tecla ESC.
-  // -----------------------------
   const modal = document.createElement("div");
   modal.className = "modal";
   modal.setAttribute("role", "dialog");

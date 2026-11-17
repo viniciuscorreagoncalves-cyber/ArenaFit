@@ -1,27 +1,9 @@
-// =====================================================
-// JAVASCRIPT COMPLETO - ARENAFIT
-// Funcionalidades aplicadas ao formulário de matrícula:
-// 1. Máscara automática para telefone
-// 2. Máscara automática para CPF
-// 3. Validação dos dígitos do CPF
-// 4. Verificação da data de nascimento
-// 5. Confirmação do envio do formulário
-//
-// Observação: este formulário é demonstrativo. Os dados
-// não são armazenados em banco de dados nem enviados
-// para um servidor.
-// =====================================================
-
 document.addEventListener("DOMContentLoaded", function () {
   const telefone = document.getElementById("telefone");
   const cpf = document.getElementById("cpf");
   const formulario = document.getElementById("form-matricula");
   const nascimento = document.getElementById("nascimento");
 
-  // -----------------------------
-  // MÁSCARA DO TELEFONE
-  // Exemplo: (18) 99999-9999
-  // -----------------------------
   if (telefone) {
     telefone.addEventListener("input", function () {
       let numeros = telefone.value.replace(/\D/g, "").slice(0, 11);
@@ -38,10 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // -----------------------------
-  // MÁSCARA DO CPF
-  // Exemplo: 000.000.000-00
-  // -----------------------------
   if (cpf) {
     cpf.addEventListener("input", function () {
       let numeros = cpf.value.replace(/\D/g, "").slice(0, 11);
@@ -54,9 +32,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // -----------------------------
-  // VALIDAÇÃO DOS DÍGITOS DO CPF
-  // -----------------------------
   function cpfValido(valor) {
     const numero = valor.replace(/\D/g, "");
 
@@ -87,9 +62,6 @@ document.addEventListener("DOMContentLoaded", function () {
     return segundoDigito === Number(numero.charAt(10));
   }
 
-  // -----------------------------
-  // IMPEDIR DATA DE NASCIMENTO FUTURA
-  // -----------------------------
   if (nascimento) {
     const hoje = new Date();
     const ano = hoje.getFullYear();
@@ -99,9 +71,6 @@ document.addEventListener("DOMContentLoaded", function () {
     nascimento.max = `${ano}-${mes}-${dia}`;
   }
 
-  // -----------------------------
-  // VALIDAÇÃO E CONFIRMAÇÃO
-  // -----------------------------
   if (formulario) {
     formulario.addEventListener("submit", function (evento) {
       evento.preventDefault();
